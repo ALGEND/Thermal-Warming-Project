@@ -1,0 +1,896 @@
+<HTML>
+<BODY>
+<PRE>
+---------------------------------------------------------------------
+
+Atmospheric Carbon Dioxide Dry Air Mole Fractions from 
+the NOAA ESRL Carbon Cycle Cooperative Global Air Sampling 
+Network, 1968-2017
+
+Version: 2018-07-31
+--------------------------------------------------------------------
+CONTENTS
+
+1.       Data source and contacts
+2.       Use of data
+2.1      Citation
+3.       Reciprocity 
+4.       Warnings
+5.       Update notes
+6.       Introduction
+7.       DATA - General Comments
+7.1      DATA - Sampling Locations
+7.2      DATA - File Name Description
+7.3      DATA - Event with single parameter
+7.4      DATA - Event with multiple parameters
+7.5      DATA - QC Flags
+7.6      DATA - Monthly Averages
+8.       Data retrieval
+9.       References
+
+--------------------------------------------------------------------
+1. DATA SOURCE AND CONTACTS
+
+National Oceanic and Atmospheric Administration (NOAA)
+Earth System Research Laboratory (ESRL)
+Global Monitoring Division (GMD)
+Carbon Cycle Greenhouse Gases (CCGG)
+
+Correspondence concerning these data should be directed to:
+
+Edward J. Dlugokencky
+NOAA ESRL Global Monitoring Division
+325 Broadway, R/GMD 1
+Boulder, CO  80305
+U.S.A.
+
+email:    Ed.Dlugokencky@noaa.gov
+          Pieter.Tans@noaa.gov
+
+--------------------------------------------------------------------
+2. USE OF DATA
+
+These data are made freely available to the public and the
+scientific community in the belief that their wide dissemination
+will lead to greater understanding and new scientific insights.
+The availability of these data does not constitute publication
+of the data.  NOAA relies on the ethics and integrity of the user to
+ensure that ESRL receives fair credit for their work.  If the data 
+are obtained for potential use in a publication or presentation, 
+ESRL should be informed at the outset of the nature of this work.  
+If the ESRL data are essential to the work, or if an important 
+result or conclusion depends on the ESRL data, co-authorship
+may be appropriate.  This should be discussed at an early stage in
+the work.  Manuscripts using the ESRL data should be sent to ESRL
+for review before they are submitted for publication so we can
+insure that the quality and limitations of the data are accurately
+represented.
+
+2.1 CITATION
+
+Please reference these data as 
+
+   Dlugokencky, E.J., P.M. Lang, J.W. Mund, A.M. Crotwell, 
+   M.J. Crotwell, and K.W. Thoning (2018), Atmospheric Carbon Dioxide
+   Dry Air Mole Fractions from the NOAA ESRL Carbon Cycle
+   Cooperative Global Air Sampling Network, 1968-2017, Version: 2018-07-31,
+   Path: ftp://aftp.cmdl.noaa.gov/data/trace_gases/co2/flask/surface/.
+
+--------------------------------------------------------------------
+3. RECIPROCITY
+
+Use of these data implies an agreement to reciprocate.
+Laboratories making similar measurements agree to make their
+own data available to the general public and to the scientific
+community in an equally complete and easily accessible form.
+Modelers are encouraged to make available to the community,
+upon request, their own tools used in the interpretation
+of the ESRL data, namely well documented model code, transport
+fields, and additional information necessary for other
+scientists to repeat the work and to run modified versions.
+Model availability includes collaborative support for new
+users of the models.
+
+--------------------------------------------------------------------
+4. WARNINGS
+
+Every effort is made to produce the most accurate and precise
+measurements possible.  However, we reserve the right to make
+corrections to the data based on recalibration of standard gases
+or for other reasons deemed scientifically justified.
+
+We are not responsible for results and conclusions based on use
+of these data without regard to this warning.
+
+
+--------------------------------------------------------------------
+5. UPDATE NOTES
+
++++++++++++++++++++++++++++++++
+Lab-wide notes:
+
+2016-08-26
+
+Latitude and longitude were adjusted for 3 sites:
+ALT
+Old: 82.4508  -62.5056   205.00   200.00
+New: 82.4508  -62.5072   195.00   190.00
+
+TAC
+Old: 52.5178    1.1389   236.00    56.00
+New: 52.5177    1.1386   236.00    56.00
+
+ZEP
+Old: 78.9067   11.8889   479.00   474.00
+New: 78.9067   11.8883   479.00   474.00
+
+Collaborator name corrected for UTA:
+Old: U.S. National Weather Service [NWS]
+New: Beth Anderson/NWS Cooperative Observer 
+
+
+2015-08-03
+
+The 3-letter site identification code for Ushuaia, Argentina (TDF) was 
+changed to USH to be consistent with the WMO GAWSIS. 
+
+2011-10-07
+
+We have introduced the term "measurement group", which identifies
+the group within NOAA and INSTAAR that made the actual measurement.
+We can now have multiple groups measuring some of the same trace 
+gas species in our discrete samples.  
+
+Measurement groups within NOAA and INSTAAR are 
+
+  ccgg:  NOAA Carbon Cycle Greenhouse Gases (CCGG)
+  hats:  NOAA Halocarbons and other Atmospheric Trace Species (HATS)
+  arl:   INSTAAR Atmospheric Research Laboratory (ARL)
+  sil:   INSTAAR Stable Isotope Laboratory (SIL)
+  curl:  INSTAAR Laboratory for Radiocarbon Preparation and Research (CURL)
+
+We have also changed the file naming convention (see section "DATA - FILE 
+NAME DESCRIPTION").
+
++++++++++++++++++++++++++++++++
+Project-specific notes:
+
+2017-07-27
+
+Method codes and sample locations were edited for accuracy.
+Edited sites are: ZEP, BKT, OXK, CGO, RPB, ASC, CHR, ICE,
+KEY, KUM, and TAP
+
+2016-07-07
+
+Incorrect sample dates from Ulaan Uul, Mogolia (UUM) from
+20 Aug. 2013 through 30 Sept. 2015 were corrected on 
+13 May 2016.
+
+2016-07-07
+
+Since 24 Jan 2015, air samples from Negev Desert, Isreal (WIS)
+are collected at 29.9731N, 35.0567E, 156 masl; the old location 
+was 30.8595N, 34.7809E, 482 masl.
+
+2016-07-07
+
+Since 03 Dec 2015, sampling in Natal, Brazil (NAT) was moved
+from 5.5147S, 35.2603W, 20 masl to 5.7952S, 35.1853W, 87 masl.
+
+2015-11-20
+
+Updated the content and format of event files to include elevation in 
+meters above sea level (masl) and sample collection intake height in 
+meters above ground level (magl). Elevation plus collection intake 
+height equals altitude, which has always been included in the NOAA 
+distribution. In adding these 2 fields, the event number column
+has moved. The new format is described in Sections 7.3 and 7.4.
+
+Users may find minor changes (from earlier distributions) to reported 
+monthly mean values for the beginning months of data records.  These 
+changes are due to minor corrections to our curve fitting methods as
+first described by Thoning et al. (JGR,1989).
+
+2013-08-27
+
+Coordinates of some of the sample locations have changed.
+These changes improve the specified location based on new
+information.  Changes tend to be minor and do not necessarily
+reflect a change in the actual sampling location.
+
+2011-10-01
+
+The data file format has been modified to include the measurement group
+and, additionally, the sample collection and analysis times now include
+second information (e.g., 2011 03 15 23 06 12).  See section 7.3 for
+details.
+
+2010-10-01
+
+The format of the NOAA ESRL data records has been changed to include
+an estimate of the uncertainty associated with each measurement.  The
+determination of the estimate is trace gas specific and described in
+section 6 (INTRODUCTION).
+
++++++++++++++++++++++++++++++++
+Parameter-specific notes:
+
+2018-07-30
+
+1. Uncertainties (68% c.i.) were estimated for all CO2
+measurements. Uncertainity entries of -999.99 occur
+when a reasonable uncertainty could not be calculated.
+
+2. In 2017, began using N.. to flag samples not meeting
+pair agreement criterion. 
+
+2016-07-07
+
+We discovered a small leak in the intake line of the portable
+sampler at Vestmannaeyjar, Iceland (ICE) that affected CO2.
+All samples from 1 July 2009 through 28 June 2016 were
+flagged N.. for CO2.
+
+2012-08-03
+
+Corrections for drifting reference gas cylinders have been
+applied to all samples measured on the following instruments
+through the specified date.
+
+Instrument ID             Analysis Date
+
+   L3                      thru 2009-10
+   L8                      thru 2010-06
+   L10                     thru 2010-10
+
+
+2011-10-13
+
+Discrete (flask) CO2 mole fractions from 1980 to 2006 have all
+been recalculated to bring them into the WMO X2007 Mole Fraction
+Scale (X07). The data since 2007 were already on the X07 scale.
+WMO X2007 is based on repeated manometric measurements of the NOAA
+primary standards (Zhao et al. 2006) and comparison of those results
+to similar measurements made over a period of more than 10 years at
+Scripps Institution of Oceanography.  The difference between the X07
+and the previous scales propagated by SIO and NOAA (X83, X87, etc.)
+is ~0.2 ppm (X07-previous) in the 1980s, decreasing to ~0.1 ppm in
+the late 1990s, and to 0.0 ppm by 2006. The recalculation of individual
+measurements was accomplished by first determining the X07 values for
+the reference gases used to measure the air samples and then using those
+values with the raw data (NDIR voltages) to recompute mole fractions
+for each sample.
+
+1999-01-01
+
+Corrections have been applied to CO2 mole fractions measured
+on the flask analysis apparatus in use from July 1987 through
+April 1998.  The corrections are +0.1 ppm to samples measured
+from July 1987 through 18 November 1993, and +0.24 ppm to samples
+measured from 19 November 1993 through 10 April 1998.
+
+Corrections for drifting reference gas cylinders have been
+applied to all samples measured during 1995 through April 2008
+on system L3 and 1998 through May 2007 on systems S2 and L3.
+
+Files obtained previously from this site should be discarded and
+replaced with the revised files contained in this version.
+
+--------------------------------------------------------------------
+6. INTRODUCTION
+
+CO2 dry air mole fractions reported in these files were
+measured by a nondispersive infrared absorption
+technique in air samples collected in glass flasks at
+NOAA ESRL Carbon Cycle Cooperative Global Air Sampling 
+Network sites. Measurements are reported on the X2007 CO2
+mole fraction scale. Calibration procedures are given in
+Komhyr et al., 1983; Komhyr et al., 1985; Thoning et al.,
+1987, and Thoning et al., 1995.  Analysis and interpretation
+of the data have been reported by Komhyr et al., 1985; 
+Conway et al., 1988; Tans et al., 1989a; Tans et al., 
+1990, and Conway et al., 1994.
+
+The file co2_flask_system.ps is a postscript file 
+explaining the operation of the flask analysis system used 
+from July 1987 through April 1998.
+
+-------------------------------------------------------------------
+7. DATA - GENERAL COMMENTS
+
+Carbon dioxide (CO2) in ambient and standard air samples is
+detected using a non-dispersive infrared (NDIR) analyzer.
+The measurement of CO2 in air is made relative to standards 
+whose CO2 mole fraction is determined with high precision and 
+accuracy. Because detector response is non-linear in the range
+of atmospheric levels, ambient samples are bracketed during 
+analysis by a set of reference standards used to calibrate 
+detector response. Measurements are reported in units of 
+micromol/mol (10^-6 mol CO2 per mol of dry air or parts per 
+million (ppm)). Measurements are directly traceable to the 
+WMO CO2 mole fraction scale.
+
+Uncertainties of the CO2 measurements are now included.
+Key components of it are our ability to propagate the WMO XCO2
+scale to working standards, the repeatability of the analyzers
+used for sample measurement, and agreement between pairs of
+samples collected simultaneously.  Zhao and Tans (2006)
+determined that the internal consistency of working standards
+is +/- 0.02 ppm (68% confidence interval). The typical
+repeatability of the analyzers, based on repeated 
+measurements of natural air from a cylinder, is +/- 0.03 ppm.
+Average pair agreement across the entire sampling network is
++/- 0.07 ppm.
+
+The Pacific Ocean Cruise (POC, travelling between the US west coast
+and New Zealand or Australia) data have been merged and grouped into 
+5 degree latitude bins.  For the South China Sea cruises (SCS) the 
+data are grouped in 3 degree latitude bins.
+
+Sampling intervals are approximately weekly for the fixed sites
+and average one sample every 3 weeks per latitude zone for POC and
+about one sample every week per latitude for SCS.
+
+Historically, samples have been collected using two general methods:
+flushing and then pressurizing glass flasks with a pump, or opening a
+stopcock on an evacuated glass flask; since 28 April 2003, only the
+former method is used.  During each sampling event, a pair of flasks 
+is filled.
+
+-------------------------------------------------------------------
+7.1 DATA - SAMPLING LOCATIONS
+
+For a summary of sampling locations, please visit
+
+<A HREF='http://www.esrl.noaa.gov/gmd/dv/site/site_table.html#ccg_surface'>http://www.esrl.noaa.gov/gmd/dv/site/site_table.html</A>.
+
+IMPORTANT NOTES: 
+1.  Data for all species may not be available for all sites listed 
+in the table.
+2.  The exact location of a sampling site recorded in our database
+may change or become better defined over time.  The latitude,
+longitude, and altitude of a sample event is based on the best
+information available at the time of sample collection.  Differences
+in sample position associated with a particular site may be due
+to the site moving or changes in technology that permit a more
+accurate location determination.
+
+To view near real-time data, manipulate and compare data, and create
+custom graphs, please visit
+
+<A HREF='http://www.esrl.noaa.gov/gmd/dv/iadv/'>http://www.esrl.noaa.gov/gmd/dv/iadv/</A>.
+
+-------------------------------------------------------------------
+7.2 DATA - FILE NAME DESCRIPTION
+
+Encoded into each file name are the parameter (trace gas identifier); sampling 
+site; sampling project; laboratory ID number; measurement group; and optional 
+qualifiers that further define the file contents.
+
+All file names use the following naming scheme:
+
+         1      2         3               4                   5            
+[parameter]_[site]_[project]_[lab ID number]_[measurement group]_[optional 
+
+         6           7
+qualifiers].[file type]
+
+
+1. [parameter]
+
+   Identifies the measured parameter or trace gas species.
+
+   (ex)
+   co2      Carbon dioxide
+   ch4      Methane
+   co2c13   d13C (co2)
+   merge    more than one parameter
+
+2. [site]
+
+   Identifies the sampling site code.
+
+   (ex)
+   brw
+   pocn30
+   car
+   amt
+
+3. [project]
+   
+   Identifies sampling platform and strategy.
+
+   (ex)
+   surface-flask
+   surface-pfp
+   surface-insitu
+   aircraft-pfp
+   aircraft-insitu
+   tower-insitu
+
+4. [lab ID number]
+
+   A numeric field that identifies the sampling laboratory (1,2,3, ...).
+   NOAA ESRL is lab number 1 (see http://www.esrl.noaa.gov/gmd/ccgg/obspack/labinfo.html).
+
+5. [measurement group]
+
+   Identifies the group within NOAA or INSTAAR that makes the actual measurement.
+   See Section 5 (UPDATE NOTES) for details.
+
+   (ex)
+   ccgg
+   hats
+   arl
+   sil
+
+6. [optional qualifiers]
+
+   Optional qualifier(s) may indicate data subsetting or averaging.
+   Multiple qualifiers are delimited by an underscore (_).  A more detailed
+   description of the file contents is included within each data file.
+
+   (ex)
+   event         All measurement results for all collected samples (discrete (flask) data only).
+   month         Computed monthly averages all collected samples (discrete (flask) data only).
+   hour_####     Computed hourly averages for the specified 4-digit year (quasi-continuous data only)
+   HourlyData    Computed hourly averages for entire record (quasi-continuous data only)
+   DailyData     Computed daily averages for entire record (quasi-continuous data only)
+   MonthlyData   Computed monthly averages for entire record (quasi-continuous data only)
+
+7. [file type]
+   
+   We provide some NOAA Global Monitoring Division measurements
+   in two unique file formats (netCDF and ASCII text). 
+
+   (ex) 
+
+   txt           ASCII text file
+   nc            netCDF4 file
+
+-------------------------------------------------------------------
+7.3 DATA - EVENT WITH SINGLE PARAMETER
+
+The event data files in ftp://aftp.cmdl.noaa.gov/data/trace_gases/co2/flask/surface/ 
+use the following naming scheme (see Section 7.2):
+
+     [parameter]_[site]_[project]_[lab ID number]_[measurement group]_[optional qualifiers].txt
+
+(ex) CH4_pocn30_surface-flask_1_ccgg.txt contains CH4 ccgg measurement
+     results for all surface flask samples collected on the Pacific 
+     Ocean Cruise sampling platform and grouped at 30N +/- 2.5 degrees.
+
+(ex) CO2_brw_surface-flask_1_ccgg.txt contains CO2 ccgg measurement 
+     results for all surface flask samples collected at Barrow, Alaska.
+
+The data files contain multiple lines of header information followed by one 
+record for each atmospheric measurement of a single parameter or trace gas species.
+
+Fields are defined as follows:
+
+Field 1:    [SITE CODE] The three-character sampling location code (see above).
+
+Field 2:    [YEAR] The sample collection date and time in UTC.
+Field 3:    [MONTH]
+Field 4:    [DAY]
+Field 5:    [HOUR]
+Field 6:    [MINUTE]
+Field 7:    [SECOND]
+
+Field 8:    [FLASK ID] The sample container ID.
+
+Field 9:    [METHOD] A single-character code that identifies the sample 
+             collection method.  The codes are:
+
+             P - Sample collected using a portable, battery
+                 powered pumping unit.  Two flasks are
+                 connected in series, flushed with air, and then
+                 pressurized to 1.2 - 1.5 times ambient pressure.
+
+             D - Similar to P but the air passes through a
+                 condenser cooled to about 5 deg C to partially
+	              dry the sample.
+
+             G - Similar to D but with a gold-plated condenser.
+
+             T - Evacuated flask filled by opening an O-ring sealed       
+                 stopcock.
+
+             S - Flasks filled at NOAA ESRL observatories by sampling
+                 air from the in situ CO2 measurement air intake system.
+
+             N - Before 1981, flasks filled using a hand-held
+                 aspirator bulb. After 1981, flasks filled using a
+                 pump different from those used in method P, D, or G.
+
+             F - Five liter evacuated flasks filled by opening a
+                 ground glass, greased stopcock.
+
+Field 10:   [TRACE GAS NAME] Gas identifier (e.g., co2, co2c13).
+
+Field 11:   [MEASUREMENT GROUP] Identifies the group within NOAA and 
+             INSTAAR making the actual measurement (e.g., ccgg, hats, arl).
+             See Section 5 (UPDATE NOTES) for details.
+
+Field 12:   [MEASURED VALUE] Dry air mole fraction or isotopic composition.  
+             Missing values are denoted by -999.99[9].
+
+Field 13:   [ESTIMATED UNCERTAINTY] Estimated uncertainty of the reported
+             measurement value.  Missing values are denoted by -999.99[9].
+
+Field 14:   [QC FLAG] A three-character field indicating the results of our 
+             data rejection and selection process, described in section 7.5.
+
+Field 15:   [INSTRUMENT] A 2-character code that identifies the instrument 
+             used for the measurement.
+
+Field 16:   [YEAR] The measurement date and time in LT.
+Field 17:   [MONTH]
+Field 18:   [DAY]
+Field 19:   [HOUR]
+Field 20:   [MINUTE]
+Field 21:   [SECOND]
+
+Field 22:   [LATITUDE] The latitude where the sample was collected, (negative (-)
+             numbers indicate samples collected in the Southern Hemipshere).
+
+Field 23:   [LONGITUDE] The longitude where the sample was collected, (negative (-)
+             numbers indicate samples collected in the Western Hemisphere).
+
+Field 24:   [ALTITUDE] The altitude of the sample inlet (masl). The reported altitude
+            is the surface elevation plus sample intake height.
+
+Field 25:   [ELEVATION] Surface elevation (masl).
+
+Field 26:   [INTAKE HEIGHT] Air sample collection height above ground level (magl).
+
+Field 27:   [EVENT NUMBER] A long integer that uniquely identifies the sampling
+             event.
+
+Fields in each line are delimited by whitespace.
+
+(ex)
+   BRW 1971 10 19 01 20 00 48-71 N co2 CCGG 319.520 -999.990 N.. L1 1971 12 15 08 46 
+   00 71.3200 -156.6000 13.00 11.00 2.00 26142
+
+-------------------------------------------------------------------
+7.4 DATA - EVENT WITH MULTIPLE PARAMETERS
+
+On special request we can distribute a "merged" file, which
+includes for each sampling event, measurement results for muliple 
+parameters or trace gas species.  A merged file does not include all 
+information found in a single parameter data file.  For example,
+merged files exclude measurement uncertainty, analysis instrument 
+ID and date and time for each parameter.  Thus, the single parameter
+data file is our most comprehensive data archive. 
+
+The format of a merged file is slightly different from a single parameter event file.
+A "merged" file will have the word "merge" in the parameter field of the file name.  
+The file name does not inform on the number of parameters included in the file.
+
+Merged data files use the following naming scheme (see Section 7.2):
+
+     merge_[site]_[project]_[lab ID number]_[measurement group]_[optional qualifiers].txt
+
+(ex) merge_pocn30_surface-flask_1_ccgg.txt contains ccgg measurement results for two or
+     more parameters for all surface flask samples collected on the Pacific Ocean Cruise 
+     sampling platform and grouped at 30N +/- 2.5 degrees.
+
+(ex) merge_brw_surface-flask_1_ccgg.txt contains ccgg measurement results for two or more
+     parameters for all surface flask samples collected at Barrow, Alaska.
+
+The data files contain multiple lines of header information followed by one 
+record for each atmospheric measurement of a single parameter or trace gas species.
+
+Fields are defined as follows:
+
+Field 1:    [SITE CODE] The three-character sampling location code (see above).
+
+Field 2:    [YEAR] The sample collection date and time in UTC.
+Field 3:    [MONTH]
+Field 4:    [DAY]
+Field 5:    [HOUR]
+Field 6:    [MINUTE]
+Field 7:    [SECOND]
+
+Field 8:    [FLASK ID] The sample container ID.
+
+Field 9:    [METHOD] A single-character code that identifies the sample 
+             collection method.  The codes are:
+
+             P - Sample collected using a portable, battery
+                 powered pumping unit.  Two flasks are
+                 connected in series, flushed with air, and then
+                 pressurized to 1.2 - 1.5 times ambient pressure.
+
+             D - Similar to P but the air passes through a
+                 condenser cooled to about 5 deg C to partially
+	              dry the sample.
+
+             G - Similar to D but with a gold-plated condenser.
+
+             T - Evacuated flask filled by opening an O-ring sealed       
+                 stopcock.
+
+             S - Flasks filled at NOAA ESRL observatories by sampling
+                 air from the in situ CO2 measurement air intake system.
+
+             N - Before 1981, flasks filled using a hand-held
+                 aspirator bulb. After 1981, flasks filled using a
+                 pump different from those used in method P, D, or G.
+
+             F - Five liter evacuated flasks filled by opening a
+                 ground glass, greased stopcock.
+
+Field 10:   [LATITUDE] The latitude where the sample was collected, (negative (-)
+             numbers indicate samples collected in the Southern Hemipshere).
+
+Field 11:   [LONGITUDE] The longitude where the sample was collected, (negative (-)
+             numbers indicate samples collected in the Western Hemisphere).
+
+Field 12:   [ALTITUDE] The altitude of the sample inlet (masl). The reported altitude
+            is the surface elevation plus sample intake height.
+
+Field 13:   [ELEVATION] Surface elevation (masl).
+
+Field 14:   [INTAKE HEIGHT] Air sample collection height above ground level (magl).
+
+Field 15:   [EVENT NUMBER] A long integer that uniquely identifies the sampling
+             event.
+
+
+There is a group of 4 fields for each parameter and measurement group included in the 
+merge file.
+
+Field ##+1: [TRACE GAS NAME] Gas identifier (e.g., co2, co2c13).
+
+Field ##+2: [MEASUREMENT GROUP] Identifies the group within NOAA and 
+             INSTAAR making the actual measurement (e.g., ccgg, hats, arl).
+             See Section 5 (UPDATE NOTES) for details.
+
+Field ##+3: [MEASURED VALUE] Dry air mole fraction or isotopic composition.  
+             Missing values are denoted by -999.99[9].
+
+Field ##+4: [QC FLAG] A three-character field indicating the results of our 
+             data rejection and selection process, described in section 7.5.
+
+Fields in each line are delimited by whitespace.
+
+(ex)
+
+   BRW 2015 11 02 20 05 00 4827-99 P 71.3230 -156.6114 16.00 11.00 5.00 397570 
+   co2 CCGG 400.480 ... co CCGG 105.340 ...
+
+-------------------------------------------------------------------
+7.5 QC FLAGS
+
+NOAA ESRL uses a 3-column quality control flag where each column
+is defined as follows:
+
+column 1    REJECTION flag.  An alphanumeric other
+            than a period (.) in the FIRST column indicates
+            a sample with obvious problems during collection
+            or analysis.  This measurement should not be interpreted.
+
+column 2    SELECTION flag.  An alphanumeric other than a
+            period (.) in the SECOND column indicates a sample
+            that is likely valid but does not meet selection
+            criteria determined by the goals of a particular
+            investigation.
+
+column 3    INFORMATION flag.  An alphanumeric other than a period (.) 
+            in the THIRD column provides additional information 
+            about the collection or analysis of the sample.
+
+            WARNING: A "P" in the 3rd column of the QC flag indicates
+            the measurement result is preliminary and has not yet been 
+            carefully examined by the PI.  The "P" flag is removed once 
+            the quality of the measurement has been assessed.
+
+Samples are collected in pairs, the pair  
+difference is calculated, and samples with 
+a pair difference greater than 0.5 ppm ("bad
+pairs") are flagged.  Through 1988 one or both 
+members of a bad pair were sometimes retained if
+they fell within +/- 3 residual standard deviations
+from a fitted curve.  From 1989 to the present, both
+members of bad pairs have been automatically
+rejected.  Retained and rejected flasks are
+flagged as follows:
+
+            Flag         Description
+
+RETAINED    ...         (3 periods) good pair
+                        (D <= 0.5 ppm)
+
+            ..H         high member of bad
+                        pair; retained
+
+            ..L         low member of bad
+                        pair; retained
+
+            ..I         sample has also been measured
+                        by another lab as part of
+                        an intercomparison experiment
+
+SELECTED    .X.         flagged automatically as an outlier, 
+                        greater than 3 sigma from a fitted curve
+
+            .Z.         flagged manually as an outlier
+	                     (this is necessary to prevent 
+                        distortion of the curve used for 
+                        automated data selection)
+
+REJECTED    +..         high member of bad
+                        pair; rejected
+
+            -..         low member of bad
+                        pair; rejected
+
+            *..         off scale or broken
+                        flask; rejected
+
+            N..         rejected due to  
+                        error in sampling 
+                        or analysis
+
+            A..         rejected due to 
+                        error in analysis
+
+            T..         sample collected as
+                        part of a methods
+                        test; not used in
+                        data analysis
+
+The retained values comprise the data set that we feel
+best represents the CO2 distribution in the remote,
+well-mixed global or regional troposphere.  These
+are the values we use to calculate long-term trends
+and interannual and seasonal variations in our studies
+of the global carbon cycle.  It is possible, and even
+likely, that some of the values flagged as not
+representative of background conditions are valid
+measurements, but represent poorly mixed air masses
+influenced by local or regional anthropogenic sources
+or strong local biospheric sources or sinks.  Users of
+these data should be aware that data selection is a
+difficult but necessary aspect of the analysis and
+interpretation of atmospheric trace gas data sets,
+and the specific data selection scheme used may be
+determined by the goals of a particular investigation.
+
+-------------------------------------------------------------------
+7.6 DATA - MONTHLY AVERAGES
+
+The monthly data files in ftp://aftp.cmdl.noaa.gov/data/trace_gases/co2/flask/surface/ 
+use the following naming scheme (see Section 7.2):
+
+     [parameter]_[site]_[project]_[lab ID number]_[measurement group]_month.txt
+
+(ex) CH4_pocn30_surface-flask_1_ccgg_month.txt contains CH4 ccgg monthly
+     mean values for all surface flask samples collected on the Pacific
+     Ocean Cruise sampling platform and grouped at 30N +/- 2.5 degrees.
+
+(ex) CO2_brw_surface-flask_1_ccgg_month.txt contains CO2 ccgg monthly
+     mean values for all surface flask samples collected at Barrow, Alaska.
+
+Monthly means are produced for each site by first averaging all
+valid measurement results in the event file with a unique sample
+date and time.  Values are then extracted at weekly intervals from 
+a smooth curve (Thoning et al., 1989) fitted to the averaged data 
+and these weekly values are averaged for each month to give the 
+monthly means recorded in the files.  Flagged data are excluded from the
+curve fitting process.  Some sites are excluded from the monthly
+mean directory because sparse data or a short record does not allow a
+reasonable curve fit.  Also, if there are 3 or more consecutive months
+without data, monthly means are not calculated for these months.
+
+The data files contain multiple lines of header information 
+followed by one line for each available month.
+
+Fields are defined as follows:
+
+Field 1:    [SITE CODE] The three-character sampling location code (see above).
+
+Field 2:    [YEAR] The sample collection year and month.
+Field 3:    [MONTH]
+
+Field 4:    [MEAN VALUE] Computed monthly mean value
+
+In these files a monthly mean value of -999.99 denotes months where there
+are insufficient data to calculate a monthly mean.
+
+-------------------------------------------------------------------
+8. DATA RETRIEVAL
+
+To transfer all files in a directory, it is more efficient to 
+download the tar or zipped files.  
+
+To transfer a tar file, use the following steps from the ftp prompt:
+
+   1. ftp> binary                    ! set transfer mode to binary
+   2. ftp> get filename.tar.gz       ! transfer the file
+   3. ftp> bye                       ! leave ftp
+
+   4. $ gunzip filename.tar.gz       ! unzip your local copy
+   5. $ tar xvf filename.tar         ! unpack the file
+
+To transfer a zipped file, use the following steps from the ftp prompt:
+
+   1. ftp> binary                    ! set transfer mode to binary
+   2. ftp> get filename.zip          ! transfer the file
+   3. ftp> bye                       ! leave ftp
+
+   4. $ unzip filename.zip           ! uncompress your local copy
+
+-------------------------------------------------------------------
+9. REFERENCES
+
+Ballantyne, A. P., C. B. Alden, J. B. Miller,
+P. Tans and J. W. C. White, (2012), Increase
+in observed net carbon dioxide uptake by land and
+oceans during the past 50 years, Nature, 488,
+7409, , 10.1038/nature11299
+ 
+Conway, T.J., P.P. Tans, L.S. Waterman, K.W. Thoning,
+D.R. Kitzis, K.A. Masarie, and N. Zhang, 1994, Evidence 
+for interannual variability of the carbon cycle from the
+NOAA/CMDL global air sampling network, J. Geophys. Res.,99,
+22831-22855.
+
+Conway, T.J., P. Tans, L.S. Waterman, K.W. Thoning,
+K.A. Masarie, and R.H. Gammon, 1988, Atmospheric
+carbon dioxide measurements in the remote global
+troposphere, 1981-1984, Tellus, 40B, 81-115.
+
+Komhyr, W.D., L.S. Waterman, and W.R. Taylor, 1983,
+Semiautomatic nondispersive infrared analyzer
+apparatus for CO2 air sample analyses, J. Geophys.
+Res., 88, 1315-1322.
+
+Komhyr, W.D., R.H. Gammon, T.B. Harris, L.S. Waterman,
+T.J. Conway, W.R. Taylor, and K.W. Thoning, 1985,
+Global atmospheric CO2 distribution and variations
+from 1968-1982 NOAA/GMCC CO2 flask sample data, J.
+Geophys. Res., 90, 5567-5596.
+
+Tans, P.P., T.J. Conway, and T. Nakazawa, 1989a,
+Latitudinal distribution of the sources and sinks of
+atmospheric carbon dioxide from surface observations
+and an atmospheric transport model, J. Geophys. Res.,
+94, 5151-5172.
+
+Tans, P.P, K.W. Thoning, W.P. Elliott, and T.J. Conway,
+1989b, Background atmospheric CO2 patterns from weekly
+flask samples at Barrow, Alaska:  Optimal signal recovery
+and error esitmates, in NOAA Tech. Memo. (ERL ARL-173).
+Environmental Research Laboratories, Boulder, CO, 131 pp.
+
+Tans, P.P., I.Y. Fung, and T. Takahashi, 1990,
+Observational constraints on the global atmospheric
+CO2 budget, Science, 247, 1431-1438.
+
+Thoning, K.W., P. Tans, T.J. Conway, and L.S.
+Waterman, 1987, NOAA/GMCC calibrations of CO2-in-air
+reference gases:  1979-1985.  NOAA Tech. Memo. (ERL
+ARL-150).  Environmental Research Laboratories,
+Boulder, CO, 63 pp.
+
+Thoning, K.W., P.P. Tans, and W.D. Komhyr, 1989, 
+Atmospheric carbon dioxide at Mauna Loa Observatory
+2. Analysis of the NOAA GMCC data, 1974-1985,
+J. Geophys. Res., 94, 8549-8565.
+
+Thoning, K.W., T.J. Conway, N. Zhang, and D. Kitzis, 1995,
+Analysis system for measurement of CO2 mixing ratios in
+flask air samples, J. Atmos. and Oceanic Tech., 12, 1349-1356.
+
+Zhao, C., and P.P. Tans (2006), Estimating uncertainty of the
+WMO Mole Fraction Scale for carbon dioxide in air, J. Geophys.
+Res. 111, D08S09, doi: 10.1029/2005JD006003.
+
+------------------------------------------------------------------- 
+</PRE>
+</BODY>
+</HTML>
